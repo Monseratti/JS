@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: inline-flex;
+        flex-direction: column;
+      }
+      .container {
+        display: inline-flex;
+        flex-direction: column;
+      }
+      .rgb_container,
+      .displaycolor,
+      .color {
+        display: flex;
+        flex-direction: row;
+      }
+      .color {
+        justify-content: center;
+        align-items: center;
+      }
+      .r_cont > label > input,
+      .g_cont > label > input,
+      .b_cont > label > input {
+        width: 50px;
+      }
+      .colorblock {
+        width: 35px;
+        height: 35px;
+      }
+
+      .create_qu, .quest_block{
+        display: flex;
+        flex-direction: column;
+      }
+      .quest_block{
+        margin-bottom: 5px;
+        border-bottom: 1px solid #000;
+      }
+      .quest_block>p{
+        margin: 0;padding: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- T1 -->
+    <!-- <form action="result.html" method="get">
+        <label for="name"><b>Your login</b></label>
+        <input type="text" name="name" id="" placeholder="Login">
+        <label for="pass"><b>Your password</b></label>
+        <input type="password" name="pass" id="" placeholder="Password">
+        <div>
+            <label for="rem_me"><b>Remember me</b></label>
+            <input type="checkbox" name="rem_me" id="">
+        </div>
+        <button type="submit" id="btn">Sing In</button>
+    </form> -->
+
+    <!-- T2 -->
+    <!-- <form action="result.html" method="get">
+        <label for="email"><b>Your email</b></label>
+        <input type="email" name="email" id="" placeholder="Email">
+        <label for="name"><b>Your login</b></label>
+        <input type="text" name="name" id="" placeholder="Login">
+        <label for="pass"><b>Your password</b></label>
+        <input type="password" name="pass" id="" placeholder="Password">
+        <label for="rep_pass"><b>Repeat password</b></label>
+        <input type="password" name="rep_pass" id="" placeholder="Repeat password">
+        <button type="submit" id="btn">Sing In</button>
+    </form> -->
+
+    <!-- T3 -->
+    <!-- <form action="result.html" method="get">
+      <label for="f_name"><b>First name</b></label>
+      <input type="text" name="f_name" id="" placeholder="First name" />
+      <label for="l_name"><b>Last name</b></label>
+      <input type="text" name="l_name" id="" placeholder="Last name" />
+      <label for="bday"><b>Birthday</b></label>
+      <input type="date" name="bday" />
+
+      <label for="gender"
+        ><b>Gender</b>
+        <label for="gender"
+          ><b> <input type="radio" name="gender" value="0" id="" /> Male</b></label
+        >
+        <label for="gender"
+          ><b> <input type="radio" name="gender" value="1" id="" /> Female</b></label
+        >
+      </label>
+
+      <label for="country"
+        ><b>Country</b>
+        <select name="country" id="">
+          <option value="Ukraine">Ukraine</option>
+          <option value="Not Ukraine" selected>Not Ukraine</option>
+        </select>
+      </label>
+
+      <label for="city"
+        ><b>City</b>
+        <select name="city" id="">
+          <option value="Kyiv">Kyiv</option>
+          <option value="KR" selected>KR</option>
+        </select>
+      </label>
+
+      <label for="skills"> <b>Skills</b>
+        <label for="html">
+            <input type="checkbox" name="html" value="HTML" id="">
+            HTML
+        </label>
+        <label for="css">
+            <input type="checkbox" name="css"  value="CSS" id="">
+            CSS
+        </label>
+        <label for="js">
+            <input type="checkbox" name="js" value="JS" id="">
+            JS
+        </label>
+        <label for="php">
+            <input type="checkbox" name="php" value="PHP" id="">
+            PHP
+        </label>
+        <label for="c_pl">
+            <input type="checkbox" name="c_pl"  value="C++" id="">
+            C++
+        </label>
+        <label for="java">
+            <input type="checkbox" name="java" value="JAVA" id="">
+            JAVA
+        </label>
+        <label for="c_sh">
+            <input type="checkbox" name="c_sh" value="C#" id="">
+            C#
+        </label>
+      </label>
+      <button type="submit" id="btn">Sing In</button>
+    </form><br><br> -->
+
+    <!-- T4 -->
+    <!-- <div class="container">
+      <div class="rgb_container">
+        <div class="r_cont">
+          <label for="r">
+            R
+            <input type="text" name="r" id="r" />
+          </label>
+        </div>
+        <div class="g_cont">
+          <label for="g">
+            G
+            <input type="text" name="g" id="g" />
+          </label>
+        </div>
+        <div class="b_cont">
+          <label for="b">
+            B
+            <input type="text" name="b" id="b" />
+          </label>
+        </div>
+      </div>
+      <button id="addColor">Add color</button>
+      <div class="displaycolor" id="dcolor">
+        <div class="color" name="colorRGB">
+          <div class="colorblock" style="background-color: rgb(0, 0, 0)"></div>
+          <div>RGB (0, 0, 0)</div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- T5 -->
+    <label for="">All questions</label>
+    <div id="qu_block"></div>
+    <hr />
+    <div class="create_qu">
+      <label for="">Add new question</label>
+      <label for="qu">Question: <input type="text" name="qu" /></label>
+      <label for="ca">Correct answer: <input type="text" name="ca" /></label>
+      <label for="wa">Wrong answer: <input type="text" name="wa" /></label>
+      <button id = "btn">Add</button>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
