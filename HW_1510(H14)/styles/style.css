@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.container>.color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.container>.color>.title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+}
+.container>.color>.title>p{
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.invalid{
+    border-color: red;
+}
+.valid{
+    border-color: lime;
+}

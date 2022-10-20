@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h2>Create new color</h2>
+    <form action="" onsubmit="return false">
+        <label for="name">Color name</label>
+        <input type="text" name="colorName" id="" required>
+        <label for="colorType">Type</label>
+        <select name="colorType" id="">
+            <option value="rgb">RGB</option>
+            <option value="rgba">RGBA</option>
+            <option value="hex">HEX</option>
+        </select>
+        <label for="colorValue">Value</label>
+        <input type="text" name="colorValue">
+        <button id = "btn">Add color</button>
+        <button id = "btnDel">Erase memory</button>
+    </form>
+    <div class="container"></div>
+</body>
+<script src="js/scrypt.js"></script>
+</html>
