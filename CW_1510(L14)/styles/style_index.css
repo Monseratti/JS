@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.container>.head{
+    display: inherit;
+    justify-content: center;
+}
+.container>form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.container>form>input,.container>form>label {
+    margin: 5px;
+}
+.invalid{
+    border-color: red;
+}
+.valid{
+    border-color: lime;
+}

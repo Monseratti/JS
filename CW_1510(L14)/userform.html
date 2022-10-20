@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style_userform.css" />
+  </head>
+  <body>
+    <div class="head">
+      <label for="name" id="name"></label>
+      <a id="back" href="index.html">Exit</a>
+    </div>
+    <hr />
+    <h3>User info</h3>
+    <form action="" onsubmit="return false">
+      <div class="usblock">
+        <label for="f_name"><b>First name</b></label>
+        <input type="text" name="f_name" pattern="/[a-zA-Z]{1,20}/" required />
+      </div>
+      <div class="usblock">
+        <label for="l_name"><b>Last name</b></label>
+        <input type="text" name="l_name" pattern="/[a-zA-Z]{1,20}/" required />
+      </div>
+      <div class="usblock">
+        <label for="birth"><b>Year of birth</b></label>
+        <input type="number" min="1900" name="birth" required />
+      </div>
+      <div class="usblock">
+        <label for="gender"><b>Gender</b></label>
+        <select name="gender" required>
+          <option value="male">Male</option>
+          <option value="male">Female</option>
+        </select>
+      </div>
+      <div class="usblock">
+        <label for="phone"><b>Phone nubmer</b></label>
+        <input type="phone" name="phone" pattern="/[\(\)\- ]*[0-9]{10,12}/" />
+      </div>
+      <div class="usblock">
+        <label for="skype"><b>Skype</b></label>
+        <input type="text" name="skype" />
+      </div>
+      <button type="submit" id="btn">Save</button>
+    </form>
+  </body>
+  <script src="js/script_userform.js"></script>
+</html>

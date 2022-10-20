@@ -96,328 +96,328 @@
 // myOrder();
 
 // T5
-// function copyGroup(group){
-//   newSt = [];
-//   for(let elem of group.st){
-//     newSt.push({ name: elem.name, ispresent: false });
-//   }
-//   return {id: group.id, st: newSt };
-// }
-// function copyLesson(less){
-//   return {id: less.id, topic: "" };
-// }
+function copyGroup(group){
+  newSt = [];
+  for(let elem of group.st){
+    newSt.push({ name: elem.name, ispresent: false });
+  }
+  return {id: group.id, st: newSt };
+}
+function copyLesson(less){
+  return {id: less.id, topic: "" };
+}
 
-// let selectGroup = document.getElementsByName("group")[0];
-// let selectLesson = document.getElementsByName("lesson")[0];
-// let container = document.getElementsByClassName("bottom_field")[0];
+let selectGroup = document.getElementsByName("group")[0];
+let selectLesson = document.getElementsByName("lesson")[0];
+let container = document.getElementsByClassName("bottom_field")[0];
 
-// let students = [];
-// students[0] = { name: "Stud 1", ispresent: false };
-// students[1] = { name: "Stud 2", ispresent: false };
-// students[2] = { name: "Stud 3", ispresent: false };
+let students = [];
+students[0] = { name: "Stud 1", ispresent: false };
+students[1] = { name: "Stud 2", ispresent: false };
+students[2] = { name: "Stud 3", ispresent: false };
 
-// let st1 = [];
-// for (let elem of students) {
-//   st1.push(elem);
-// }
-// st1.push({ name: "Stud 4", ispresent: false });
+let st1 = [];
+for (let elem of students) {
+  st1.push(elem);
+}
+st1.push({ name: "Stud 4", ispresent: false });
 
-// let st2 = [];
-// for (let elem of students) {
-//   st2.push(elem);
-// }
-// st2.push({ name: "Stud 5", ispresent: false });
+let st2 = [];
+for (let elem of students) {
+  st2.push(elem);
+}
+st2.push({ name: "Stud 5", ispresent: false });
 
-// let lessons = [];
-// lessons[0] = { id: 0, topic: "" };
-// lessons[1] = { id: 1, topic: "" };
-// lessons[2] = { id: 2, topic: "" };
-// lessons[3] = { id: 3, topic: "" };
-// lessons[4] = { id: 4, topic: "" };
-// lessons[5] = { id: 5, topic: "" };
+let lessons = [];
+lessons[0] = { id: 0, topic: "" };
+lessons[1] = { id: 1, topic: "" };
+lessons[2] = { id: 2, topic: "" };
+lessons[3] = { id: 3, topic: "" };
+lessons[4] = { id: 4, topic: "" };
+lessons[5] = { id: 5, topic: "" };
 
-// let groups = [];
-// groups.push({ id: 0, st: students });
-// groups.push({ id: 1, st: st1 });
-// groups.push({ id: 2, st: st2 });
+let groups = [];
+groups.push({ id: 0, st: students });
+groups.push({ id: 1, st: st1 });
+groups.push({ id: 2, st: st2 });
 
-// for (let i = 0; i < groups.length; i++) {
-//   let opt = document.createElement("option");
-//   opt.value = i;
-//   opt.text = `Group ${i + 1}`;
-//   selectGroup.appendChild(opt);
-// }
-// for (let i = 0; i < lessons.length; i++) {
-//   let opt = document.createElement("option");
-//   opt.value = i;
-//   opt.text = i + 1;
-//   selectLesson.appendChild(opt);
-// }
+for (let i = 0; i < groups.length; i++) {
+  let opt = document.createElement("option");
+  opt.value = i;
+  opt.text = `Group ${i + 1}`;
+  selectGroup.appendChild(opt);
+}
+for (let i = 0; i < lessons.length; i++) {
+  let opt = document.createElement("option");
+  opt.value = i;
+  opt.text = i + 1;
+  selectLesson.appendChild(opt);
+}
 
-// let groupLesson = [];
-// for (let elem of lessons) {
-//   for (let group of groups) {
-//     groupLesson.push({ lesson: copyLesson(elem), group: copyGroup(group) });
-//   }
-// }
-// document.getElementById("bnt").addEventListener("click", function () {
-//   if (container.children.length == 0) {
-//     // TOPIC
-//     let tmp = document.createElement("tmpel");
-//     tmp.innerText = "Topic: ";
-//     container.appendChild(tmp);
+let groupLesson = [];
+for (let elem of lessons) {
+  for (let group of groups) {
+    groupLesson.push({ lesson: copyLesson(elem), group: copyGroup(group) });
+  }
+}
+document.getElementById("bnt").addEventListener("click", function () {
+  if (container.children.length == 0) {
+    // TOPIC
+    let tmp = document.createElement("tmpel");
+    tmp.innerText = "Topic: ";
+    container.appendChild(tmp);
 
-//     tmp = document.createElement("input");
-//     tmp.type = "text";
-//     tmp.id = "theme";
-//     container.appendChild(tmp);
-//     // END TOPIC
+    tmp = document.createElement("input");
+    tmp.type = "text";
+    tmp.id = "theme";
+    container.appendChild(tmp);
+    // END TOPIC
 
-//     // TABLE
-//     let tableValue = document.createElement("table");
-//     // HEAD
-//     tmp = document.createElement("tr");
-//     let tVHeadR = document.createElement("td");
-//     tVHeadR.innerHTML = "<b>Students</b>";
-//     tmp.appendChild(tVHeadR);
+    // TABLE
+    let tableValue = document.createElement("table");
+    // HEAD
+    tmp = document.createElement("tr");
+    let tVHeadR = document.createElement("td");
+    tVHeadR.innerHTML = "<b>Students</b>";
+    tmp.appendChild(tVHeadR);
 
-//     tVHeadR = document.createElement("td");
-//     tVHeadR.innerHTML = "<b>In presents</b>";
-//     tmp.appendChild(tVHeadR);
+    tVHeadR = document.createElement("td");
+    tVHeadR.innerHTML = "<b>In presents</b>";
+    tmp.appendChild(tVHeadR);
 
-//     tableValue.appendChild(tmp);
-//     // END HEAD
+    tableValue.appendChild(tmp);
+    // END HEAD
 
-//     // TABLE BODY
-//     for (let elem of groupLesson) {
-//       if (
-//         elem.lesson.id == selectLesson.value &&
-//         elem.group.id == selectGroup.value
-//       ) {
-//         console.log(elem);
-//         document.getElementById("theme").value = elem.lesson.topic;
-//         let iter = 0;
-//         for (let st of elem.group.st) {
-//           tmp = document.createElement("tr");
+    // TABLE BODY
+    for (let elem of groupLesson) {
+      if (
+        elem.lesson.id == selectLesson.value &&
+        elem.group.id == selectGroup.value
+      ) {
+        console.log(elem);
+        document.getElementById("theme").value = elem.lesson.topic;
+        let iter = 0;
+        for (let st of elem.group.st) {
+          tmp = document.createElement("tr");
 
-//           let tRow = document.createElement("td");
-//           tRow.id = `stud${iter}`;
-//           tRow.innerText = st.name;
-//           tmp.appendChild(tRow);
+          let tRow = document.createElement("td");
+          tRow.id = `stud${iter}`;
+          tRow.innerText = st.name;
+          tmp.appendChild(tRow);
 
-//           tRow = document.createElement("td");
-//           let cbx = document.createElement("input");
-//           cbx.type = "checkbox";
-//           cbx.id = `st${iter}`;
-//           cbx.checked = st.ispresent;
-//           tRow.appendChild(cbx);
+          tRow = document.createElement("td");
+          let cbx = document.createElement("input");
+          cbx.type = "checkbox";
+          cbx.id = `st${iter}`;
+          cbx.checked = st.ispresent;
+          tRow.appendChild(cbx);
 
-//           tmp.appendChild(tRow);
-//           tableValue.appendChild(tmp);
+          tmp.appendChild(tRow);
+          tableValue.appendChild(tmp);
 
-//           iter++;
-//         }
-//       }
-//     }
-//     // END TABLE BODY
-//     tableValue.style.gridColumn = "span 2";
-//     container.appendChild(tableValue);
-//     // END TABLE
+          iter++;
+        }
+      }
+    }
+    // END TABLE BODY
+    tableValue.style.gridColumn = "span 2";
+    container.appendChild(tableValue);
+    // END TABLE
 
-//     // SAVE BUTTON
-//     tmp = document.createElement("button");
-//     tmp.innerHTML = "Save";
-//     tmp.id = "save_btn";
-//     tmp.style.gridColumn = "span 2";
-//     container.appendChild(tmp);
-//     document.getElementById("save_btn").addEventListener("click", function () {
-//       for (let elem of groupLesson) {
-//         if (
-//           elem.lesson.id == selectLesson.value &&
-//           elem.group.id == selectGroup.value
-//         ) {
-//           elem.lesson.topic = document.getElementById("theme").value;
-//           let iter = 0;
-//           for (let st of elem.group.st) {
-//             st.ispresent = document.getElementById(`st${iter}`).checked;
-//             iter++;
-//           }
-//         }
-//       }
-//       for (let i = container.childNodes.length - 1; i >= 0; i--) {
-//         container.removeChild(container.childNodes[i]);
-//       }
-//     });
-//     // END SAVE BUTTON
-//   }
-// });
+    // SAVE BUTTON
+    tmp = document.createElement("button");
+    tmp.innerHTML = "Save";
+    tmp.id = "save_btn";
+    tmp.style.gridColumn = "span 2";
+    container.appendChild(tmp);
+    document.getElementById("save_btn").addEventListener("click", function () {
+      for (let elem of groupLesson) {
+        if (
+          elem.lesson.id == selectLesson.value &&
+          elem.group.id == selectGroup.value
+        ) {
+          elem.lesson.topic = document.getElementById("theme").value;
+          let iter = 0;
+          for (let st of elem.group.st) {
+            st.ispresent = document.getElementById(`st${iter}`).checked;
+            iter++;
+          }
+        }
+      }
+      for (let i = container.childNodes.length - 1; i >= 0; i--) {
+        container.removeChild(container.childNodes[i]);
+      }
+    });
+    // END SAVE BUTTON
+  }
+});
 
-// selectGroup.addEventListener("change", function () {
-//   for (let i = container.childNodes.length - 1; i >= 0; i--) {
-//     container.removeChild(container.childNodes[i]);
-//   }
-//   console.log(`Group ${+selectGroup.value+1}`);
-// });
-// selectLesson.addEventListener("change", function () {
-//   for (let i = container.childNodes.length - 1; i >= 0; i--) {
-//     container.removeChild(container.childNodes[i]);
-//   }
-//   console.log(`Lesson ${+selectLesson.value+1}`);
-// });
+selectGroup.addEventListener("change", function () {
+  for (let i = container.childNodes.length - 1; i >= 0; i--) {
+    container.removeChild(container.childNodes[i]);
+  }
+  console.log(`Group ${+selectGroup.value+1}`);
+});
+selectLesson.addEventListener("change", function () {
+  for (let i = container.childNodes.length - 1; i >= 0; i--) {
+    container.removeChild(container.childNodes[i]);
+  }
+  console.log(`Lesson ${+selectLesson.value+1}`);
+});
 
 // T6
 
-// train seats
-class Seat {
-  constructor(number, istaken, price) {
-    this.number = number;
-    this.istaken = istaken;
-    this.price = price;
-  }
-}
-function newSeatsArr(number) {
-  let arr = [];
-  for (let i = 0; i < number; i++) {
-    arr.push(new Seat(+i + 1, false, 8));
-  }
-  return arr;
-}
-// end train seats
+// // train seats
+// class Seat {
+//   constructor(number, istaken, price) {
+//     this.number = number;
+//     this.istaken = istaken;
+//     this.price = price;
+//   }
+// }
+// function newSeatsArr(number) {
+//   let arr = [];
+//   for (let i = 0; i < number; i++) {
+//     arr.push(new Seat(+i + 1, false, 8));
+//   }
+//   return arr;
+// }
+// // end train seats
 
-// train
-class Train {
-  constructor(direction, seats, date) {
-    this.direction = direction;
-    this.seats = seats;
-    this.date = new Date(date).toLocaleDateString();
-  }
-}
-let train1 = new Train("Odesa-Kyiv", newSeatsArr(28), "10/18/2022");
-let train2 = new Train("Odesa-Lviv", newSeatsArr(28), "10/20/2022");
-let trains = [train1, train2];
-// end train
+// // train
+// class Train {
+//   constructor(direction, seats, date) {
+//     this.direction = direction;
+//     this.seats = seats;
+//     this.date = new Date(date).toLocaleDateString();
+//   }
+// }
+// let train1 = new Train("Odesa-Kyiv", newSeatsArr(28), "10/18/2022");
+// let train2 = new Train("Odesa-Lviv", newSeatsArr(28), "10/20/2022");
+// let trains = [train1, train2];
+// // end train
 
-// date get
-let selectDate = document.getElementsByName("date")[0];
-// end date get
+// // date get
+// let selectDate = document.getElementsByName("date")[0];
+// // end date get
 
-// container get
-let container = document.getElementsByClassName("bottom_field")[0];
-// end container get
+// // container get
+// let container = document.getElementsByClassName("bottom_field")[0];
+// // end container get
 
-// selector set
-let selectDirection = document.getElementsByName("direction")[0];
-trains.forEach((element) => {
-  let tmp = document.createElement("option");
-  tmp.value = element.direction;
-  tmp.text = element.direction;
-  selectDirection.appendChild(tmp);
-});
-// end selector set
-let ticketSum = 0;
-let selectTrain;
-// select button event
-document.getElementById("btn").addEventListener("click", function () {
-  // find train
-  selectTrain = trains.filter(
-    (o) =>
-      o.direction == selectDirection.value &&
-      o.date == new Date(selectDate.value).toLocaleDateString()
-  )[0];
-  if (typeof selectTrain == "undefined") {
-    alert(
-      `No train on ${new Date(selectDate.value).toLocaleDateString()} to ${
-        selectDirection.value
-      } direction`
-    );
-    return;
-  }
-  // end find train
-  // print train
-  let tmp = document.createElement("div");
-  tmp.className = "train_body";
-  // coupe
-  let coupeCount = Math.floor(selectTrain.seats.length / 4);
-  for (let i = 0; i < coupeCount; i++) {
-    let coupe = document.createElement("div");
-    coupe.className = "coupe";
-    coupe.style.width = `${100 / coupeCount}%`;
-    // seats
-    for (let y = 4 * i; y < 4 * (i + 1); y++) {
-      let seat = document.createElement("div");
-      seat.className = "seat";
-      let label = document.createElement("label");
-      label.className = "seatnumber";
-      label.innerHTML = `<input type="checkbox" name ="seatplace" value = ${
-        selectTrain.seats[y].price
-      } ${selectTrain.seats[y].istaken == false ? "" : "checked disabled"}> ${
-        selectTrain.seats[y].number
-      }`;
-      seat.appendChild(label);
-      coupe.appendChild(seat);
-    }
-    // end seats
-    tmp.appendChild(coupe);
-  }
-  // end coupe
-  container.appendChild(tmp);
-  document.getElementsByName("seatplace").forEach((element) => {
-    element.addEventListener("change", function () {
-      if (element.checked) ticketSum += +element.value;
-      else ticketSum -= +element.value;
-      document.getElementById("ticketSum").innerHTML = `Total: $${ticketSum}`;
-    });
-  });
-  // end print train
+// // selector set
+// let selectDirection = document.getElementsByName("direction")[0];
+// trains.forEach((element) => {
+//   let tmp = document.createElement("option");
+//   tmp.value = element.direction;
+//   tmp.text = element.direction;
+//   selectDirection.appendChild(tmp);
+// });
+// // end selector set
+// let ticketSum = 0;
+// let selectTrain;
+// // select button event
+// document.getElementById("btn").addEventListener("click", function () {
+//   // find train
+//   selectTrain = trains.filter(
+//     (o) =>
+//       o.direction == selectDirection.value &&
+//       o.date == new Date(selectDate.value).toLocaleDateString()
+//   )[0];
+//   if (typeof selectTrain == "undefined") {
+//     alert(
+//       `No train on ${new Date(selectDate.value).toLocaleDateString()} to ${
+//         selectDirection.value
+//       } direction`
+//     );
+//     return;
+//   }
+//   // end find train
+//   // print train
+//   let tmp = document.createElement("div");
+//   tmp.className = "train_body";
+//   // coupe
+//   let coupeCount = Math.floor(selectTrain.seats.length / 4);
+//   for (let i = 0; i < coupeCount; i++) {
+//     let coupe = document.createElement("div");
+//     coupe.className = "coupe";
+//     coupe.style.width = `${100 / coupeCount}%`;
+//     // seats
+//     for (let y = 4 * i; y < 4 * (i + 1); y++) {
+//       let seat = document.createElement("div");
+//       seat.className = "seat";
+//       let label = document.createElement("label");
+//       label.className = "seatnumber";
+//       label.innerHTML = `<input type="checkbox" name ="seatplace" value = ${
+//         selectTrain.seats[y].price
+//       } ${selectTrain.seats[y].istaken == false ? "" : "checked disabled"}> ${
+//         selectTrain.seats[y].number
+//       }`;
+//       seat.appendChild(label);
+//       coupe.appendChild(seat);
+//     }
+//     // end seats
+//     tmp.appendChild(coupe);
+//   }
+//   // end coupe
+//   container.appendChild(tmp);
+//   document.getElementsByName("seatplace").forEach((element) => {
+//     element.addEventListener("change", function () {
+//       if (element.checked) ticketSum += +element.value;
+//       else ticketSum -= +element.value;
+//       document.getElementById("ticketSum").innerHTML = `Total: $${ticketSum}`;
+//     });
+//   });
+//   // end print train
 
-  // summary
-  let summary = document.createElement("div");
-  summary.className = "summary";
-  tmp = document.createElement("div");
-  tmp.id = "ticketSum";
-  tmp.innerHTML = `Total: $${ticketSum}`;
-  let buyBTN = document.createElement("button");
-  buyBTN.textContent = "Buy ticket";
-  buyBTN.id = "buyBTN";
-  buyBTN.style.marginLeft = "10px";
-  summary.appendChild(tmp);
-  summary.appendChild(buyBTN);
-  container.appendChild(summary);
-  // end summary
-  // end select button event
+//   // summary
+//   let summary = document.createElement("div");
+//   summary.className = "summary";
+//   tmp = document.createElement("div");
+//   tmp.id = "ticketSum";
+//   tmp.innerHTML = `Total: $${ticketSum}`;
+//   let buyBTN = document.createElement("button");
+//   buyBTN.textContent = "Buy ticket";
+//   buyBTN.id = "buyBTN";
+//   buyBTN.style.marginLeft = "10px";
+//   summary.appendChild(tmp);
+//   summary.appendChild(buyBTN);
+//   container.appendChild(summary);
+//   // end summary
+//   // end select button event
   
-  //buy button 
-  document.getElementById("buyBTN").addEventListener("click", function () {
-    let ticketplace = document.getElementsByClassName("seatnumber");
-    for (let element of ticketplace) {
-      if (element.children[0].checked) {
-        selectTrain.seats[
-          +element.textContent.replace(" ", "") - 1
-        ].istaken = true;
-      }
-    }
-    for (let i = container.childNodes.length - 1; i >= 0; i--) {
-      container.removeChild(container.childNodes[i]);
-    }
-    ticketSum = 0;
-  });
-  //end buy button 
-});
+//   //buy button 
+//   document.getElementById("buyBTN").addEventListener("click", function () {
+//     let ticketplace = document.getElementsByClassName("seatnumber");
+//     for (let element of ticketplace) {
+//       if (element.children[0].checked) {
+//         selectTrain.seats[
+//           +element.textContent.replace(" ", "") - 1
+//         ].istaken = true;
+//       }
+//     }
+//     for (let i = container.childNodes.length - 1; i >= 0; i--) {
+//       container.removeChild(container.childNodes[i]);
+//     }
+//     ticketSum = 0;
+//   });
+//   //end buy button 
+// });
 
-// date change event
-selectDate.addEventListener("change", function(){
-  for (let i = container.childNodes.length - 1; i >= 0; i--) {
-    container.removeChild(container.childNodes[i]);
-  }
-})
-// end date change event
+// // date change event
+// selectDate.addEventListener("change", function(){
+//   for (let i = container.childNodes.length - 1; i >= 0; i--) {
+//     container.removeChild(container.childNodes[i]);
+//   }
+// })
+// // end date change event
 
-// selector change event
-selectDirection.addEventListener("change",function(){
-  for (let i = container.childNodes.length - 1; i >= 0; i--) {
-    container.removeChild(container.childNodes[i]);
-  }
-})
-// end selector change event
+// // selector change event
+// selectDirection.addEventListener("change",function(){
+//   for (let i = container.childNodes.length - 1; i >= 0; i--) {
+//     container.removeChild(container.childNodes[i]);
+//   }
+// })
+// // end selector change event
 
 

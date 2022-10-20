@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head"><b>Registration</b></div>
+        <form action="userform.html" method="get" onsubmit="return false">
+            <label for="name">Email</label>
+            <input type="email" pattern="([a-z]+[A-Z]*[\.\-_]*){3,}@([a-z]+[A-Z]*[\.\-_]*){2,}\.([a-z]+[A-Z]*[\.\-_]*){2,}$" required name="email">
+            <label for="pass">Password</label>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required name="pass">
+            <label for="rep_pass">Repeat</label>
+            <input type="password" required name="rep_pass">
+            <button id="signin">Sign In</button>
+        </form>
+    </div>
+</body>
+<script src="js/script_index.js"></script>
+</html>

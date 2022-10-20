@@ -107,7 +107,7 @@
   } */
 
 /* T5 */
-/* table,
+table,
 td {
   border-collapse: collapse;
   border: 1px solid black;
@@ -115,7 +115,7 @@ td {
 .bottom_field {
   display: grid;
   grid-template-columns: 100px 1fr;
-} */
+}
 
 /* T6 */
 .train_body{
