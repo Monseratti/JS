@@ -1,0 +1,39 @@
+.myButton{
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.myButton>i{
+    font-size: 14px;
+}
+.myButton:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.searchInp{
+    border-radius: 10px;
+}
+.imgWeather{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.currTemp{
+    font-size: 72px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+.statistic{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+}
+.myWeatherImg{
+    width: 100px; height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.carBlock{
+    display: flex;
+    justify-content:space-evenly;
+}
