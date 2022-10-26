@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="contactlist col-4"></div>
+    </div>
+    <button id="btn"><i class="fa fa-plus-circle">Add contact</i></button>
+    <div class="addcontact row bg-warning d-none">
+      <div class="pos_id col-1"><input type="text" id="pos_id" readonly/></div>
+      <div class="row">
+        <div class="col-2 justify-content-center align-items-center">
+          <label for="">Name</label>
+        </div>
+        <div class="col-1"><input type="text" id="contName" required /></div>
+      </div>
+      <div class="row">
+        <div class="col-2 justify-content-center align-items-center">
+          <label for="">Surname</label>
+        </div>
+        <div class="col-1">
+          <input type="text" id="contSurname" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2 justify-content-center align-items-center">
+          <label for="">Age</label>
+        </div>
+        <div class="col-1"><input type="number" id="contAge" /></div>
+      </div>
+      <div class="row">
+        <div class="col-2 justify-content-center align-items-center">
+          <label for="">Mobile</label>
+        </div>
+        <div class="col-1"><input type="phone" id="contMobile" /></div>
+      </div>
+      <div class="row">
+        <div class="col-2 justify-content-center align-items-center">
+          <label for="">Home</label>
+        </div>
+        <div class="col-1"><input type="phone" id="contHome" /></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button
+          id="save"
+          class="bg-transparent border border-0 fs-4 text-danger fa fa-save"
+          ></button>
+          <button
+          id="close"
+          class="bg-transparent border border-0 fs-4 text-danger fa fa-close"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scrypt.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  </html>
+  
