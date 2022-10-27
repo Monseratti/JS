@@ -1,0 +1,121 @@
+/* T1 */
+/* .container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: aquamarine;
+  width: 100vw;
+  height: 100vh;
+}
+img{
+    position: absolute;
+    width: 50px;height: 70px;
+} */
+
+/* T2 */
+/* menu */
+/* ul
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    height: 100vh;
+    width: 50px;
+    list-style: none;
+    background-color: gray;
+    z-index: 1;
+    transition: width 1s ease 0s;
+} 
+li
+{
+    content-visibility: hidden;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 40px 40px;
+    color: #ffffff;
+    margin-left: -40px;
+    height: 50px;
+    padding-top: 25px;
+    padding-right: 80px;
+    padding-left:  100px;
+}
+li:first-child
+{
+    content-visibility:inherit;
+    padding:  30px 80px 30px 20px;
+}
+li:first-child:hover
+{
+    background-color: gray;
+    cursor: auto;
+}
+li:hover
+{
+    background-color: rgb(97, 97, 97);
+    cursor: pointer;
+}
+ul:hover>li
+{ */
+    /* content-visibility:inherit;
+}
+ul:hover
+{
+    width: auto;
+}
+/* ////////////////////////////////////////////// */
+/* body */
+/* div
+{
+    position:absolute;
+    left: 100px;
+} */ 
+
+/* T3 */
+/* .container_color{
+    display: flex;
+    justify-content: center;
+}
+.container_fruit{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: space-evenly;
+}
+.fruit{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 100px;
+    height: 30px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: limegreen;
+}
+.yellow{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
+.shadow{
+    box-shadow: 5px 1px 10px black;
+} */
+
+/* T4 */
+.container_star{
+    display: flex;
+    flex-direction: row;
+}
+span{
+    margin-left: 5px;
+    color: orange;
+}
