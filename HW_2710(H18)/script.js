@@ -29,26 +29,50 @@ $("#close_open_left").click((e) => {
 
 $("#left_move").mousedown(() =>
   $(".container_left").mousemove((ev) => {
-    $(".container_left_up").css("height", `${ev.pageY}px`);
+    let contUpH = $(".container_left_up").css("height").split("p")[0];
+    let contDownH = $(".container_left_down").css("height").split("p")[0];
+
+    $(".container_left_up").css(
+      "height",
+      contUpH >= 100 ? `${ev.pageY}px` : 100
+    );
+    contUpH = $(".container_left_up").css("height").split("p")[0];
     $(".container_left_down").css(
       "height",
-      $(".container_left").css("height").split("p")[0] -
-        $(".container_left_up").css("height").split("p")[0]
+      contDownH >= 100
+        ? $(".container_left").css("height").split("p")[0] -
+            $("#left_move").css("height").split("p")[0] -
+            contUpH
+        : 100
     );
   })
 );
 
-$(".container_left").mouseup(()=>{$(".container_left").off("mousemove")});
+$(".container_left").mouseup(() => {
+  $(".container_left").off("mousemove");
+});
 
 $("#right_move").mousedown(() =>
   $(".container_right").mousemove((ev) => {
-    $(".container_right_up").css("height", `${ev.pageY}px`);
+    let contUpH = $(".container_right_up").css("height").split("p")[0];
+    let contDownH = $(".container_right_down").css("height").split("p")[0];
+
+    $(".container_right_up").css(
+      "height",
+      contUpH >= 100 ? `${ev.pageY}px` : 100
+    );
+    contUpH = $(".container_right_up").css("height").split("p")[0];
     $(".container_right_down").css(
       "height",
-      $(".container_right").css("height").split("p")[0] -
-        $(".container_right_up").css("height").split("p")[0]
+      contDownH >= 100
+        ? $(".container_right").css("height").split("p")[0] -
+            $("#right_move").css("height").split("p")[0] -
+            contUpH
+        : 100
     );
   })
 );
 
-$(".container_right").mouseup(()=>{$(".container_right").off("mousemove")});
+$(".container_right").mouseup(() => {
+  $(".container_right").off("mousemove");
+});
